@@ -6,7 +6,7 @@ module.exports = {
         // 键必须以斜线开始和结束
         '/@/': path.resolve(__dirname, './src')
     },
-    hostname: '0.0.0.0',
+    // hostname: '0.0.0.0',
     port: 8080,
     // 是否自动在浏览器打开
     open: true,
