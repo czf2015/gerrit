@@ -23,7 +23,7 @@ export default {
 
   data() {
     return {
-      years: ["all", "2018", "2019"],
+      years: ["all", '2020', "2018", "2019"],
       year: "all",
       statusArr: ["open", "merged", "abandoned"],
       status: "open",
@@ -41,7 +41,7 @@ export default {
     dataSource() {
       const list = this.list.filter(
         ({ created, updated }) =>
-          this.year == "all" || new Date(updated) > new Date(this.year)
+          this.year == "all" || new Date(updated) >= new Date(this.year) && new Date(updated) < new Date(this.year + 1)
       );
       return convertToPieData(list, this.status);
     },
