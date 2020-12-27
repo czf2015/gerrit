@@ -31,7 +31,7 @@ module.exports = {
             changeOrigin: true,
             rewrite: path => path.replace(/\/api/, ''),
             headers: {
-                Cookie: 'GerritAccount=aGiuzjmeSBujkGUHZwYfpCaDR6VOUuK; XSRF_TOKEN=aGiuwZf0KbpD9D4pCvByCAS37.c1f3G'
+                Cookie: 'GerritAccount=aGiuIwio0U99SM8ZCwEz1D98A7NVYAq; XSRF_TOKEN=aGiurLduJSChWpCYOc3UPQ0BSiLsf4u'
             }
         }
     }

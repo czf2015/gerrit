@@ -14,6 +14,7 @@ import { PieChart } from "/@/components/Chart";
 import CustomSelect from "/@/components/CustomSelect.vue";
 import { getChanges } from "/@/services/gerrit.js";
 import { convertToPieData } from "./helpers.js";
+import { gerritData } from "/@/mock";
 
 export default {
   name: "demoPage",
@@ -22,7 +23,7 @@ export default {
 
   data() {
     return {
-      years: ['all', "2018", "2019"],
+      years: ["all", "2018", "2019"],
       year: "all",
       statusArr: ["open", "merged", "abandoned"],
       status: "open",
@@ -48,8 +49,13 @@ export default {
 
   methods: {
     fetchData() {
-      getChanges(`status:${this.status}`, this.filter).then((list) => {
+      getChanges(`status:${this.status}`).then((list) => {
         this.list = list;
+        // 使用mock数据
+        if (list.length == 0) {
+          console.log("-------mock-------");
+          this.list = gerritData[this.status];
+        }
       });
     },
     handleSelectYear(year) {

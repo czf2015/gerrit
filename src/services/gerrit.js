@@ -4,7 +4,7 @@ const clean = (raw) => raw.replace(/^\)\]\}\'/, '')
 const parse = (raw) => JSON.parse(clean(raw))
 
 
-export const getChanges = async (query = 'status:open', filter) => {
+export const getChanges = async (query = 'status:open') => {
     return await Request({
         method: "get",
         url: "/api/changes/",
@@ -14,7 +14,7 @@ export const getChanges = async (query = 'status:open', filter) => {
             // n: 25,
             // S: 25,
         },
-    }).then(parse);
+    }).then(parse)
 }
 
 export const getProjects = async (type = 'ALL') => {
