@@ -51,11 +51,11 @@ export const convertToPieData = (list, status) => {
         title: status,
         series: [
             {
-                name: 'owner', center: ["15%", 250], type: 'pie', clockwise: false,
+                name: 'owner', center: ["15%", 350], type: 'pie', clockwise: false,
                 label: { formatter: '{b}: {d}%' }, radius: [0, 120], data: raw.owner.sort(ascend)
             },
-            { name: 'branch', center: ["45%", 250], type: 'pie', clockwise: false, label: { formatter: '{b}: {d}%' }, radius: [100, 120], data: raw.branch.sort(ascend) },
-            { name: 'project', center: ["75%", 250], type: 'pie', clockwise: false, label: { formatter: '{b}: {d}%' }, roseType: 'area', radius: [40, 120], data: raw.project.sort(ascend) }
+            { name: 'branch', center: ["45%", 350], type: 'pie', clockwise: false, label: { formatter: '{b}: {d}%' }, radius: [100, 120], data: raw.branch.sort(ascend) },
+            { name: 'project', center: ["75%", 350], type: 'pie', clockwise: false, label: { formatter: '{b}: {d}%' }, roseType: 'area', radius: [40, 120], data: raw.project.sort(ascend) }
         ]
     }
 }

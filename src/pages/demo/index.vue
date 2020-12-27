@@ -1,8 +1,15 @@
 <template>
   <main id="demo">
+    <h2>TVOS代码统计</h2>
     <div class="control">
-      <CustomSelect :options="statusArr" @custom-change="handleSelectStatus" />
-      <CustomSelect :options="years" @custom-change="handleSelectYear" />
+      <CustomSelect
+        :options="statusArr"
+        @custom-change="handleSelectStatus"
+      />
+      <CustomSelect
+        :options="years"
+        @custom-change="handleSelectYear"
+      />
     </div>
     <PieChart :dataSource="dataSource" />
   </main>
@@ -80,8 +87,16 @@ export default {
   margin: auto;
   width: 19.2rem;
 }
+
+h2 {
+  text-align: center;
+  font-size: .42rem;
+}
+
 .control {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-between;
+  margin: .4rem 0 .8rem .4rem;
+  width: 2.8rem;
 }
 </style>

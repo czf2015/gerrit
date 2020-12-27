@@ -43,9 +43,12 @@ export default class Chart {
                 }
             },
             title: {
-                text: title
+                text: title,
+                left: 'auto',
             },
             legend: {
+                left: '2%',
+                top: '5%',
                 data: series.map(item => item.name)
             },
             series,

@@ -34,7 +34,7 @@ option {
 
 select {
   padding-left: 0.14rem;
-  width: 2rem;
+  width: 1.2rem;
   font-weight: bold;
   font-size: 0.16rem;
   line-height: 1.8;
