@@ -37,8 +37,7 @@ export default {
 
 <style scoped>
 .pie-chart {
-  margin-top: 40px;
-  width: 1920px;
-  height: 1080px;
+  width: 19.2rem;
+  height: 5.6rem;
 }
 </style>
