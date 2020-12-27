@@ -42,14 +42,17 @@ export const handle = (list) => {
     }
 }
 
+
 export const convertToPieData = (list, status) => {
     const raw = handle(list)
+    const ascend = (a, b) => a.value - b.value
+
     return {
         title: status,
         series: [
-            { name: 'owner', center: ["15%", 250], type: 'pie', radius: [0, 120], data: raw.owner },
-            { name: 'branch', center: ["42%", 250], type: 'pie', radius: [100, 120], data: raw.branch },
-            { name: 'project', center: ["70%", 250], type: 'pie', roseType: 'area', radius: [40, 120], data: raw.project }
+            { name: 'owner', center: ["15%", 250], type: 'pie', radius: [0, 120], data: raw.owner.sort(ascend) },
+            { name: 'branch', center: ["42%", 250], type: 'pie', radius: [100, 120], data: raw.branch.sort(ascend) },
+            { name: 'project', center: ["70%", 250], type: 'pie', roseType: 'area', radius: [40, 120], data: raw.project.sort(ascend) }
         ]
     }
 }
