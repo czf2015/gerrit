@@ -22,7 +22,7 @@ export default {
 
   data() {
     return {
-      years: ["2018", "2019", "all"],
+      years: ['all', "2018", "2019"],
       year: "all",
       statusArr: ["open", "merged", "abandoned"],
       status: "open",
